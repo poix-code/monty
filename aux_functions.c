@@ -71,3 +71,19 @@ int _isdigit(void)
 	}
 	return (0);
 }
+/**
+ * length - Checks the length of a list
+ * @node: points to head of the stack.
+ * Return: the number of elements.
+ */
+int length(stack_t *node)
+{
+	int i;
+
+	while (node)
+	{
+		i++;
+		node = node->next;
+	}
+	return (i);
+}

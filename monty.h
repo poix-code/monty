@@ -65,5 +65,7 @@ void add(stack_t **node, unsigned int line_number);
 void nop(stack_t **node, unsigned int line_number);
 void free_stack(stack_t *stack);
 stack_t *addNode(stack_t **head, char *n);
+void sub(stack_t **node, unsigned int line_number);
+int length(stack_t *node);
 
 #endif /* _MONTY_H_ */

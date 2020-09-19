@@ -16,6 +16,7 @@ void (*fs(char *bf, unsigned int l))(stack_t **stack, unsigned int line_number)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	(void)l;

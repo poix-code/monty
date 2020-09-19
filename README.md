@@ -25,3 +25,7 @@ Implement the **add** function.
 ### 5. nop
 
 Implement the **nop** function.
+
+### 6. sub
+
+Implement the **sub** function.
