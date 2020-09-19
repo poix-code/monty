@@ -19,6 +19,7 @@ void (*fs(char *bf, unsigned int l))(stack_t **stack, unsigned int line_number)
 		{"sub", sub},
 		{"div", _div},
 		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 	(void)l;
