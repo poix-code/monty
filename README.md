@@ -34,3 +34,8 @@ Implement the **sub** function.
 
 Implement the **div** function.
 
+### 8. mul
+
+Implement the **mul** function.
+
+###
