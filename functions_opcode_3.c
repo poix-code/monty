@@ -40,6 +40,14 @@ void _mod(stack_t **node, unsigned int line_number)
                 fclose(var.f_d);
                 exit(EXIT_FAILURE);
 	}
+	if ((*node) == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		free(var.buffer);
+		free_stack(*node);
+		fclose(var.f_d);
+		exit(EXIT_FAILURE);
+	}
 	(*node)->next->n %= (*node)->n;
 	pop(node, line_number);
 }
