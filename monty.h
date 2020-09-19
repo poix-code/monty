@@ -68,5 +68,6 @@ stack_t *addNode(stack_t **head, char *n);
 void sub(stack_t **node, unsigned int line_number);
 int length(stack_t *node);
 void _div(stack_t **node, unsigned int line_number);
+void _mul(stack_t **node, unsigned int line_number);
 
 #endif /* _MONTY_H_ */
