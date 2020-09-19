@@ -88,7 +88,7 @@ void sub(stack_t **node, unsigned int line_number)
  * @line_number: Number of the line of the instruction.
  * Return: void.
  */
-void div(stack_t **node, unsigned int line_number)
+void _div(stack_t **node, unsigned int line_number)
 {
 	if (length(*node) < 2)
 	{
