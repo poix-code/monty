@@ -38,4 +38,6 @@ Implement the **div** function.
 
 Implement the **mul** function.
 
-###
+### 9. mod
+
+Implement the **mod** function.
