@@ -29,3 +29,8 @@ Implement the **nop** function.
 ### 6. sub
 
 Implement the **sub** function.
+
+### 7. div
+
+Implement the **div** function.
+
