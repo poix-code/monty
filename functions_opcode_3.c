@@ -5,7 +5,7 @@
  *        and the first node is removed.
  * @node: Points to the top of the stack.
  * @line_number: Number of the line of the instruction.
- * Return: void. 
+ * Return: void.
  */
 void _mul(stack_t **node, unsigned int line_number)
 {
@@ -102,4 +102,7 @@ void pstr(stack_t **node, unsigned int line_number)
 		}
 	}
 	putchar('\n');
+	free(var.buffer);
+	free_stack(*node);
+	fclose(var.f_d);
 }
