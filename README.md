@@ -41,3 +41,11 @@ Implement the **mul** function.
 ### 9. mod
 
 Implement the **mod** function.
+
+### 10. comments
+
+Enable comments.
+
+### 11. pchar
+
+Implement **pchar** function.
