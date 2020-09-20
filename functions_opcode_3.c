@@ -34,7 +34,7 @@ void _mod(stack_t **node, unsigned int line_number)
 {
 	if (length(*node) < 2)
 	{
-		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
                 free(var.buffer);
                 free_stack(*node);
                 fclose(var.f_d);
