@@ -18,7 +18,7 @@ void _mul(stack_t **node, unsigned int line_number)
                 exit(EXIT_FAILURE);
         }
         (*node)->next->n *= (*node)->n;
-        pop(node, line_number);
+	pop(node, line_number);
 }
 
 /**
@@ -84,22 +84,12 @@ void pstr(stack_t **node, unsigned int line_number)
 	stack_t *tmp = *node;
 
 	(void)line_number;
-	if (!(*node))
-        {
-                printf("\n");
-	}
-	else
+	while (tmp && tmp->n > 0)
 	{
-		while (tmp)
-		{
-			if (tmp->n == 0)
-				break;
-			if (!(tmp->n < 0 || tmp->n > 127))
-			{
-				putchar((char)tmp->n);
-				tmp = tmp->next;
-			}
+		if (tmp->n < 0 || tmp->n > 127)
+			break;
+		putchar(tmp->n);
+		tmp = tmp->next;
 	}
-		putchar('\n');
-	}
+	putchar('\n');
 }
