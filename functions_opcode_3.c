@@ -51,3 +51,31 @@ void _mod(stack_t **node, unsigned int line_number)
 	(*node)->next->n %= (*node)->n;
 	pop(node, line_number);
 }
+/**
+ * pchar - Prints the integer stored in the top of the stack
+ *         as its ascii value representation.
+ * @node: Points to the top of the stack.
+ * @line_number: Number of the line of the instruction.
+ * Return: void.
+ */
+void pchar(stack_t **node, unsigned int line_number)
+{
+	if (!(*node))
+	{
+		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
+                free(var.buffer);
+                free_stack(*node);
+                fclose(var.f_d);
+                exit(EXIT_FAILURE);
+	}
+	if ((*node)->n < 0 || (*node)->n > 127)
+	{
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
+                free(var.buffer);
+                free_stack(*node);
+                fclose(var.f_d);
+                exit(EXIT_FAILURE);
+	}
+	putchar((char)(*node)->n);
+	putchar('\n');
+}
