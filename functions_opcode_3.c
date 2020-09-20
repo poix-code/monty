@@ -87,22 +87,19 @@ void pstr(stack_t **node, unsigned int line_number)
 	if (!(*node))
         {
                 printf("\n");
-                free(var.buffer);
-                free_stack(*node);
-                fclose(var.f_d);
 	}
-	while (tmp)
+	else
 	{
-		if (tmp->n == 0)
-			break;
-		if (!(tmp->n < 0 || tmp->n > 127))
+		while (tmp)
 		{
-			putchar((char)tmp->n);
-			tmp = tmp->next;
-		}
+			if (tmp->n == 0)
+				break;
+			if (!(tmp->n < 0 || tmp->n > 127))
+			{
+				putchar((char)tmp->n);
+				tmp = tmp->next;
+			}
 	}
-	putchar('\n');
-	free(var.buffer);
-	free_stack(*node);
-	fclose(var.f_d);
+		putchar('\n');
+	}
 }
