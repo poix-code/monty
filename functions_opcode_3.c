@@ -40,7 +40,7 @@ void _mod(stack_t **node, unsigned int line_number)
                 fclose(var.f_d);
                 exit(EXIT_FAILURE);
 	}
-	if ((*node) == 0)
+	if ((*node)->n == 0)
 	{
 		fprintf(stderr, "L%u: division by zero\n", line_number);
 		free(var.buffer);
