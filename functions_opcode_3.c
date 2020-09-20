@@ -79,6 +79,14 @@ void pchar(stack_t **node, unsigned int line_number)
 	putchar((char)(*node)->n);
 	putchar('\n');
 }
+/**
+ * pstr - Prints the integers stored in the stack as their ascii value representation.
+ *        It stops printing when the value is 0, when the stack is over
+ *        and when the value of the element is a non-ascii value.
+ * @node: Points to the top of the stack.
+ * @line_number: Number of the line of the instruction.
+ * Return: void.
+ */
 void pstr(stack_t **node, unsigned int line_number)
 {
 	stack_t *tmp = *node;
@@ -92,4 +100,24 @@ void pstr(stack_t **node, unsigned int line_number)
 		tmp = tmp->next;
 	}
 	putchar('\n');
+}
+/**
+ * rotl - Rotates the top of the stack to the bottom of the stack.
+ * @node: Points to the top of the stack.
+ * @line_number: Number of the line of the instruction.
+ * Return: void.
+ */
+void rotl(stack_t **node, unsigned int line_number)
+{
+	int n;
+
+	(void)line_number;
+	if ((*node) || (*node)->next)
+	{
+		n = (*node)->n;
+		(*node) = (*node)->next;
+		free((*node)->prev);
+		(*node)->prev = NULL;
+		add_dnodeint_end(node, n);
+	}
 }

@@ -72,5 +72,7 @@ void _mul(stack_t **node, unsigned int line_number);
 void _mod(stack_t **node, unsigned int line_number);
 void pchar(stack_t **node, unsigned int line_number);
 void pstr(stack_t **node, unsigned int line_number);
+void rotl(stack_t **node, unsigned int line_number);
+stack_t *add_dnodeint_end(stack_t **node, const int n);
 
 #endif /* _MONTY_H_ */

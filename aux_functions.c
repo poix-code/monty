@@ -87,3 +87,42 @@ int length(stack_t *node)
 	}
 	return (i);
 }
+/**
+ * add_dnodeint_end - adds a new node at the end of the stack.
+ * @node: node to be added.
+ * @n: data to store in the node.
+ * Return: the address of the new node.
+ */
+stack_t *add_dnodeint_end(stack_t **node, const int n)
+{
+	stack_t *newNode = NULL;
+
+	if (!node)
+		return (NULL);
+	newNode = malloc(sizeof(stack_t));
+	if (!newNode)
+	{
+		fprintf(stderr, "Error: malloc failed");
+		free(var.buffer);
+		free_stack(*node);
+		fclose(var.f_d);
+		exit(EXIT_FAILURE);
+	}
+	newNode->n = n;
+	if (!*node)
+	{
+		newNode->next = NULL;
+		newNode->prev = NULL;
+		*node = newNode;
+	}
+	else
+	{
+		newNode->next = *node;
+		while (newNode->next->next)
+			newNode->next = newNode->next->next;
+		newNode->next->next = newNode;
+		newNode->prev = newNode->next;
+		newNode->next = NULL;
+	}
+	return (newNode);
+}
