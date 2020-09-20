@@ -79,3 +79,27 @@ void pchar(stack_t **node, unsigned int line_number)
 	putchar((char)(*node)->n);
 	putchar('\n');
 }
+void pstr(stack_t **node, unsigned int line_number)
+{
+	stack_t *tmp = *node;
+
+	(void)line_number;
+	if (!(*node))
+        {
+                printf("\n");
+                free(var.buffer);
+                free_stack(*node);
+                fclose(var.f_d);
+	}
+	while (tmp)
+	{
+		if (tmp->n == 0)
+			break;
+		if (!(tmp->n < 0 || tmp->n > 127))
+		{
+			putchar((char)tmp->n);
+			tmp = tmp->next;
+		}
+	}
+	putchar('\n');
+}

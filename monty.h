@@ -71,5 +71,6 @@ void _div(stack_t **node, unsigned int line_number);
 void _mul(stack_t **node, unsigned int line_number);
 void _mod(stack_t **node, unsigned int line_number);
 void pchar(stack_t **node, unsigned int line_number);
+void pstr(stack_t **node, unsigned int line_number);
 
 #endif /* _MONTY_H_ */
